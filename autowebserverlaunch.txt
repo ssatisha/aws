@@ -1,0 +1,12 @@
+###Code to Configure EC2 as weberver downloading from S3, & Launching webserver ..
+###
+
+
+#!/bin/bash
+sudo yum update -y
+sudo yum install httpd -y
+sudo service httpd start
+sudo chkconfig httpd on
+sudo chmod 777 /var/www/html
+aws s3 cp s3://mywebfolder/html.zip /var/www/html/
+sudo unzip html.zip
