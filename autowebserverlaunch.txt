@@ -8,5 +8,6 @@ sudo yum install httpd -y
 sudo service httpd start
 sudo chkconfig httpd on
 sudo chmod 777 /var/www/html
-aws s3 cp s3://mywebfolder/html.zip /var/www/html/
-sudo unzip /var/www/html/html.zip
+sudo aws s3 cp s3://mywebfolder/html.zip /var/www/html/
+sudo cd /var/www/html
+sudo unzip html.zip
